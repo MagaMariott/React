@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.DS_Store
+defense-notes.txt
+submission-screenshot.png
+*.pdf
+/myimage.JPG

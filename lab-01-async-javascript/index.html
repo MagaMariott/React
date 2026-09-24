@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async JavaScript Lab</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="top">
+      <p class="eyebrow">Homework 01 · Vanilla JavaScript</p>
+      <h1>JavaScript runtime lab</h1>
+      <p class="lede">
+        Closures keep a private run counter for each task. Promises and
+        <code>async/await</code> wait for simulated loading. The event loop
+        decides what runs next: the call stack, then microtasks, then timers.
+      </p>
+    </header>
+
+    <main>
+      <section class="panel" aria-labelledby="tasks-title">
+        <div class="panel-head">
+          <h2 id="tasks-title">Tasks</h2>
+          <p>Each card is its own closure. The counter is not a global variable.</p>
+        </div>
+        <div id="task-list" class="task-list"></div>
+        <div class="actions">
+          <button id="run-all" type="button">Run all tasks</button>
+          <button id="run-sequential" type="button" class="ghost">Run sequentially</button>
+          <button id="run-concurrent" type="button" class="ghost">Run concurrently</button>
+          <button id="reset-all" type="button" class="ghost">Reset counters</button>
+        </div>
+        <p id="batch-message" class="batch-message" role="status"></p>
+      </section>
+
+      <section class="panel" aria-labelledby="compare-title">
+        <div class="panel-head">
+          <h2 id="compare-title">Sequential vs concurrent</h2>
+          <p>
+            Same three tasks. One path awaits them one after another. The other
+            starts them together with <code>Promise.allSettled</code>.
+          </p>
+        </div>
+        <div class="compare">
+          <article>
+            <h3>One by one</h3>
+            <p class="time" id="seq-time">—</p>
+            <p id="seq-note">Not measured yet.</p>
+          </article>
+          <article>
+            <h3>Together</h3>
+            <p class="time" id="con-time">—</p>
+            <p id="con-note">Not measured yet.</p>
+          </article>
+        </div>
+        <p id="compare-why" class="why"></p>
+      </section>
+
+      <section class="split">
+        <article class="panel" aria-labelledby="stack-title">
+          <div class="panel-head">
+            <h2 id="stack-title">Call stack trace</h2>
+            <p>What happens on the stack when one task starts a timer.</p>
+          </div>
+          <ol id="stack-log" class="log"></ol>
+        </article>
+
+        <article class="panel" aria-labelledby="loop-title">
+          <div class="panel-head">
+            <h2 id="loop-title">Event loop demo</h2>
+            <p>
+              Two timers, two <code>Promise.then</code> callbacks, and one
+              <code>async</code> function. The prediction is written before the
+              demo runs.
+            </p>
+          </div>
+          <h3>Predicted output</h3>
+          <ol id="predicted" class="log predicted"></ol>
+          <button id="run-loop" type="button">Run event loop demo</button>
+          <h3>Actual output</h3>
+          <ol id="actual" class="log"></ol>
+          <div id="loop-explain" class="why"></div>
+        </article>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
