@@ -1,0 +1,275 @@
+:root {
+  --ink: #1c1915;
+  --muted: #6b6256;
+  --paper: #f3eee6;
+  --card: #fffaf3;
+  --line: #e4d9c8;
+  --amber: #b86a12;
+  --amber-soft: #f6e2c4;
+  --filed: #1f6b45;
+  --filed-soft: #d7efe3;
+  --open: #3d4a66;
+  --open-soft: #e4e8f2;
+  --danger: #9d2430;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top right, #fff 0, transparent 36%),
+    var(--paper);
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  line-height: 1.45;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+.top,
+main {
+  width: min(860px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.top {
+  padding: 40px 0 8px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  color: var(--amber);
+}
+
+h1 {
+  margin: 0;
+  font-family: "Iowan Old Style", Palatino, Georgia, serif;
+  font-size: clamp(2.6rem, 6vw, 4.4rem);
+  line-height: 0.92;
+  font-weight: 650;
+}
+
+.lede {
+  max-width: 62ch;
+  color: var(--muted);
+}
+
+main {
+  display: grid;
+  gap: 14px;
+  padding-bottom: 64px;
+}
+
+.add,
+.toolbar,
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+
+.add {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr auto;
+  gap: 10px;
+  align-items: end;
+  padding: 14px;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: #fff;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 10px 14px;
+  background: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--amber-soft);
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.add button {
+  background: var(--ink);
+  color: #fffaf3;
+  border-color: var(--ink);
+}
+
+.add button:hover {
+  background: #332c24;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+}
+
+.filters,
+.toolbar-side,
+.status-row,
+.card-actions,
+.checks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.toolbar-side {
+  justify-content: flex-end;
+}
+
+.toolbar-side p,
+.place,
+.checks p {
+  margin: 0;
+  color: var(--muted);
+}
+
+button.on {
+  background: var(--ink);
+  color: #fffaf3;
+  border-color: var(--ink);
+}
+
+.list {
+  display: grid;
+  gap: 12px;
+}
+
+.card {
+  padding: 16px;
+  border-left: 6px solid var(--open);
+}
+
+.card.status-on-site {
+  border-left-color: var(--amber);
+}
+
+.card.status-filed {
+  border-left-color: var(--filed);
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.card h2 {
+  margin: 0;
+  font-family: "Iowan Old Style", Palatino, Georgia, serif;
+  font-size: 1.55rem;
+  font-weight: 650;
+}
+
+.badge {
+  margin: 0;
+  width: fit-content;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+.badge.status-open {
+  background: var(--open-soft);
+  color: var(--open);
+}
+
+.badge.status-on-site {
+  background: var(--amber-soft);
+  color: var(--amber);
+}
+
+.badge.status-filed {
+  background: var(--filed-soft);
+  color: var(--filed);
+}
+
+.local {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.checks strong {
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.card-actions {
+  margin-top: 12px;
+}
+
+button.danger {
+  color: var(--danger);
+}
+
+.empty {
+  margin: 0;
+  padding: 18px;
+  border: 1px dashed var(--line);
+  border-radius: 16px;
+  color: var(--muted);
+  background: rgba(255, 250, 243, 0.7);
+}
+
+@media (max-width: 720px) {
+  .add,
+  .toolbar,
+  .card-top {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+
+  .toolbar-side,
+  .card-top {
+    justify-content: flex-start;
+  }
+}
