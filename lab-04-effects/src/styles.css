@@ -1,0 +1,293 @@
+:root {
+  --ink: #1c1915;
+  --muted: #6b6256;
+  --paper: #f3eee6;
+  --card: #fffaf3;
+  --line: #e4d9c8;
+  --copper: #9a4d22;
+  --copper-soft: #f6e2d4;
+  --ok: #1f6b45;
+  --ok-soft: #d7efe3;
+  --warn: #8a5a12;
+  --warn-soft: #f8e7c4;
+  --bad: #9d2430;
+  --bad-soft: #f8d7db;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, #fff 0, transparent 32%),
+    var(--paper);
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  line-height: 1.45;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 14px;
+  background: #fff;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background: var(--copper-soft);
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+button.solid,
+button.on {
+  background: var(--ink);
+  color: #fffaf3;
+  border-color: var(--ink);
+}
+
+button.danger {
+  color: var(--bad);
+}
+
+.top,
+main {
+  width: min(1040px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.top {
+  padding: 36px 0 8px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  color: var(--copper);
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-family: "Iowan Old Style", Palatino, Georgia, serif;
+  font-weight: 650;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  line-height: 0.92;
+}
+
+.lede,
+.muted,
+.description {
+  color: var(--muted);
+}
+
+.lede {
+  max-width: 62ch;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 16px;
+  align-items: start;
+  padding-bottom: 56px;
+}
+
+.list-panel,
+.stage,
+.detail,
+.form,
+.state {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+
+.list-panel,
+.detail,
+.form,
+.state {
+  padding: 16px;
+}
+
+.panel-head,
+.row,
+.split {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.panel-head {
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.items {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  text-align: left;
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.item span {
+  display: grid;
+}
+
+.item strong {
+  font-size: 1rem;
+}
+
+.item.on .muted {
+  color: #e6d9c8;
+}
+
+.pill {
+  border-radius: 999px;
+  padding: 3px 8px;
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
+
+.status-available {
+  background: var(--ok-soft);
+  color: var(--ok);
+}
+
+.status-on-stage {
+  background: var(--copper-soft);
+  color: var(--copper);
+}
+
+.status-repair {
+  background: var(--warn-soft);
+  color: var(--warn);
+}
+
+.state {
+  min-height: 180px;
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  gap: 10px;
+}
+
+.state.error,
+.banner {
+  color: var(--bad);
+}
+
+.banner {
+  margin: 0;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: var(--bad-soft);
+}
+
+.detail h2,
+.form h2 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.description {
+  margin-top: 0;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 16px;
+  margin: 0 0 16px;
+}
+
+dt {
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+dd {
+  margin: 2px 0 0;
+}
+
+.form {
+  display: grid;
+  gap: 10px;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: #fff;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 1rem;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+}
+
+.stage {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+@media (max-width: 800px) {
+  main,
+  dl,
+  .split {
+    grid-template-columns: 1fr;
+  }
+}
