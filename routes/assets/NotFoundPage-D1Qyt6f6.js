@@ -1,0 +1,1 @@
+import{j as s,L as e}from"./index-A_dkmEFs.js";function t(){return s.jsxs("section",{className:"state",children:[s.jsx("p",{className:"eyebrow",children:"404"}),s.jsx("h1",{children:"This page is not on the map"}),s.jsx("p",{children:"The address does not match a screen in Sign routes."}),s.jsx(e,{to:"/",className:"button solid",children:"Home"})]})}export{t as default};

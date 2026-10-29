@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign routes</title>
+    <script>
+      (function () {
+        try {
+          var target = sessionStorage.getItem("signRoutesPath");
+          if (!target) return;
+          sessionStorage.removeItem("signRoutesPath");
+          if (target.indexOf("/React/routes/") === 0) {
+            history.replaceState(null, "", target);
+          }
+        } catch (error) {}
+      })();
+    </script>
+    <script type="module" crossorigin src="/React/routes/assets/index-A_dkmEFs.js"></script>
+    <link rel="stylesheet" crossorigin href="/React/routes/assets/index-DBnM00Dd.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
