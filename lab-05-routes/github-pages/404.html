@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Page not found</title>
+    <script>
+      (function () {
+        var path = location.pathname;
+        var inApp = path === "/React/routes" || path.indexOf("/React/routes/") === 0;
+        var isRoot = path === "/React/routes" || path === "/React/routes/";
+        if (!inApp || isRoot) return;
+        try {
+          sessionStorage.setItem("signRoutesPath", path + location.search + location.hash);
+        } catch (error) {}
+        location.replace("/React/routes/");
+      })();
+    </script>
+    <style>
+      body {
+        margin: 48px auto;
+        max-width: 640px;
+        padding: 0 16px;
+        color: #172028;
+        background: #f3f1ea;
+        font-family: "Avenir Next", "Segoe UI", sans-serif;
+      }
+      a { color: #0c5c5c; }
+    </style>
+  </head>
+  <body>
+    <h1>Page not found</h1>
+    <p>That address is not on this site.</p>
+    <ul>
+      <li><a href="/React/">Introduction</a></li>
+      <li><a href="/React/routes/">Sign routes</a></li>
+      <li><a href="/React/signs/">Sign deck</a></li>
+      <li><a href="/React/dashboard/">Night watch</a></li>
+      <li><a href="/React/ledger/">Cage ledger</a></li>
+    </ul>
+  </body>
+</html>
