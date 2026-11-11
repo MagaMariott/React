@@ -1,22 +1,19 @@
-import { useState } from "react";
 import { Link, useSearchParams } from "react-router";
 import { categoryLabel, categoryOptions } from "../labels.js";
-import { useAsync } from "../hooks/useAsync.js";
-import { getSignStats } from "../services/service.js";
+import { useSignStats } from "../hooks/useSignQueries.js";
 
 export default function DashboardPage() {
   const [params, setParams] = useSearchParams();
   const requested = params.get("category") || "all";
   const category = requested === "all" || categoryOptions.some((item) => item.value === requested) ? requested : "all";
-  const [reloadKey, setReloadKey] = useState(0);
-  const { status, data, error } = useAsync(() => getSignStats(category), [category, reloadKey]);
+  const { data, error, isPending, isFetching, isError, refetch } = useSignStats(category);
 
   const listQuery = category === "all" ? "" : `?category=${category}`;
 
   return (
     <div>
       <h1>Dashboard</h1>
-      <p className="lede">Counts come from the sign service. The kind filter asks for a new response.</p>
+      <p className="lede">Counts come from the sign service. The same kind is cached for a minute, then fetched again.</p>
       <label className="narrow">
         Kind
         <select
@@ -34,25 +31,25 @@ export default function DashboardPage() {
           ))}
         </select>
       </label>
-      {status === "loading" ? <p className="state">Loading the statistics…</p> : null}
-      {status === "refreshing" ? <p className="hint">Updating the statistics…</p> : null}
-      {status === "error" && !data ? (
+      {isPending ? <p className="state">Loading the statistics…</p> : null}
+      {isFetching && !isPending ? <p className="hint">Updating the statistics…</p> : null}
+      {isError && !data ? (
         <div className="state">
-          <p>{error}</p>
-          <button type="button" onClick={() => setReloadKey((current) => current + 1)}>
+          <p>{error.message}</p>
+          <button type="button" onClick={() => refetch()}>
             Try again
           </button>
         </div>
       ) : null}
-      {status === "error" && data ? (
+      {isError && data ? (
         <div className="banner">
-          <p>{error}</p>
-          <button type="button" onClick={() => setReloadKey((current) => current + 1)}>
+          <p>{error.message}</p>
+          <button type="button" onClick={() => refetch()}>
             Try again
           </button>
         </div>
       ) : null}
-      {data && data.total === 0 && status !== "loading" ? <p className="state">No signs in this kind.</p> : null}
+      {data && data.total === 0 && !isPending ? <p className="state">No signs in this kind.</p> : null}
       {data && data.total > 0 ? (
         <>
           <section className="stats">

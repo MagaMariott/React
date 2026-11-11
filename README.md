@@ -10,6 +10,7 @@ Course labs and the midterm.
 | 04 Effects and API | [lab-04-effects](lab-04-effects) | A prop ledger loaded through a fake API and useEffect |
 | Midterm | [midterm-sign-deck](midterm-sign-deck) | A road-sign catalog with search, filters, sorting, and pages |
 | 05 Routing | [lab-05-routes](lab-05-routes) | Nested routes, URL filters, and a sign dashboard |
+| 06 Auth and caching | [lab-05-routes](lab-05-routes) | Firebase email/Google sign-in and a cached sign service on the routes app |
 
 Deployed introduction: https://magamariott.github.io/React/
 

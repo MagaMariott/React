@@ -1,5 +1,6 @@
 import { lazy } from "react";
 import { BrowserRouter, Route, Routes } from "react-router";
+import RequireAuth from "./components/RequireAuth.jsx";
 import RootLayout from "./components/RootLayout.jsx";
 import SignsLayout from "./components/SignsLayout.jsx";
 import HomePage from "./pages/HomePage.jsx";
@@ -8,6 +9,8 @@ import SignListPage from "./pages/SignListPage.jsx";
 const AboutPage = lazy(() => import("./pages/AboutPage.jsx"));
 const DashboardPage = lazy(() => import("./pages/DashboardPage.jsx"));
 const LoginPage = lazy(() => import("./pages/LoginPage.jsx"));
+const SignupPage = lazy(() => import("./pages/SignupPage.jsx"));
+const ProfilePage = lazy(() => import("./pages/ProfilePage.jsx"));
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage.jsx"));
 const SignDetailPage = lazy(() => import("./pages/SignDetailPage.jsx"));
 const SignFormPage = lazy(() => import("./pages/SignFormPage.jsx"));
@@ -26,6 +29,15 @@ export default function App() {
           </Route>
           <Route path="dashboard" element={<DashboardPage />} />
           <Route path="login" element={<LoginPage />} />
+          <Route path="signup" element={<SignupPage />} />
+          <Route
+            path="profile"
+            element={
+              <RequireAuth>
+                <ProfilePage />
+              </RequireAuth>
+            }
+          />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>

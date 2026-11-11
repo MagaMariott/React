@@ -1,56 +1,21 @@
-import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router";
 import { categoryLabel } from "../labels.js";
-import { getSign, updateSign } from "../services/service.js";
+import { useSignDetail, useUpdateSign } from "../hooks/useSignQueries.js";
 
 export default function SignDetailPage() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const [reloadKey, setReloadKey] = useState(0);
-  const [status, setStatus] = useState("loading");
-  const [sign, setSign] = useState(null);
-  const [error, setError] = useState("");
-  const [pending, setPending] = useState(false);
-  const [actionError, setActionError] = useState("");
-
-  useEffect(() => {
-    let active = true;
-    setStatus("loading");
-    setSign(null);
-    setError("");
-    setActionError("");
-    getSign(id)
-      .then((next) => {
-        if (!active) return;
-        setSign(next);
-        setStatus("ready");
-      })
-      .catch((reason) => {
-        if (!active) return;
-        setError(reason.message);
-        setStatus("error");
-      });
-    return () => {
-      active = false;
-    };
-  }, [id, reloadKey]);
+  const { data: sign, error, isPending, isError, refetch } = useSignDetail(id);
+  const learned = useUpdateSign();
 
   function toggleLearned() {
-    if (!sign || pending) return;
-    const signId = sign.id;
-    setPending(true);
-    setActionError("");
-    updateSign(signId, { learned: !sign.learned })
-      .then((updated) => {
-        setSign((current) => (current && current.id === signId ? updated : current));
-      })
-      .catch((reason) => setActionError(reason.message))
-      .finally(() => setPending(false));
+    if (!sign || learned.isPending) return;
+    learned.mutate({ id: sign.id, changes: { learned: !sign.learned } });
   }
 
-  if (status === "loading") return <p className="state">Loading the sign…</p>;
+  if (isPending) return <p className="state">Loading the sign…</p>;
 
-  if (error === "Sign not found") {
+  if (error?.message === "Sign not found") {
     return (
       <div className="state">
         <h1>This sign is not in the deck</h1>
@@ -67,11 +32,11 @@ export default function SignDetailPage() {
     );
   }
 
-  if (status === "error" || !sign) {
+  if (isError || !sign) {
     return (
       <div className="state">
-        <p>{error || "The sign could not be loaded."}</p>
-        <button type="button" onClick={() => setReloadKey((current) => current + 1)}>
+        <p>{error?.message || "The sign could not be loaded."}</p>
+        <button type="button" onClick={() => refetch()}>
           Try again
         </button>
       </div>
@@ -120,9 +85,9 @@ export default function SignDetailPage() {
           <dd>{sign.id}</dd>
         </div>
       </dl>
-      {actionError ? <p className="banner">{actionError}</p> : null}
-      <button type="button" className="solid" onClick={toggleLearned} disabled={pending}>
-        {pending ? "Saving…" : sign.learned ? "Mark as still learning" : "Mark as learned"}
+      {learned.isError ? <p className="banner">{learned.error.message}</p> : null}
+      <button type="button" className="solid" onClick={toggleLearned} disabled={learned.isPending}>
+        {learned.isPending ? "Saving…" : sign.learned ? "Mark as still learning" : "Mark as learned"}
       </button>
     </article>
   );

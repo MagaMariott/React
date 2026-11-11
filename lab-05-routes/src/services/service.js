@@ -7,10 +7,21 @@ const maxDelay = 1100;
 const errorChance = 0.06;
 const shapeOrder = ["triangle", "circle", "rectangle", "diamond", "octagon", "inverted"];
 
-function fakeRequest(operation) {
+function abortError() {
+  const error = new Error("Aborted");
+  error.name = "AbortError";
+  return error;
+}
+
+function fakeRequest(operation, signal) {
   return new Promise((resolve, reject) => {
+    if (signal?.aborted) {
+      reject(abortError());
+      return;
+    }
     const delay = minDelay + Math.floor(Math.random() * (maxDelay - minDelay + 1));
-    setTimeout(() => {
+    const timer = setTimeout(() => {
+      signal?.removeEventListener("abort", onAbort);
       if (Math.random() < errorChance) {
         reject(new Error("Simulated server Error"));
         return;
@@ -21,6 +32,11 @@ function fakeRequest(operation) {
         reject(error);
       }
     }, delay);
+    function onAbort() {
+      clearTimeout(timer);
+      reject(abortError());
+    }
+    signal?.addEventListener("abort", onAbort, { once: true });
   });
 }
 
@@ -49,7 +65,7 @@ export function getSigns({
   sort = "name",
   page = 1,
   limit = 12,
-} = {}) {
+} = {}, signal) {
   return fakeRequest(() => {
     let items = readData();
     const needle = search.trim().toLowerCase();
@@ -77,18 +93,18 @@ export function getSigns({
       limit,
       totalPages,
     };
-  });
+  }, signal);
 }
 
-export function getSign(id) {
+export function getSign(id, signal) {
   return fakeRequest(() => {
     const sign = readData().find((item) => item.id === Number(id));
     if (!sign) throw new Error("Sign not found");
     return sign;
-  });
+  }, signal);
 }
 
-export function createSign(draft) {
+export function createSign(draft, signal) {
   return fakeRequest(() => {
     const items = readData();
     const code = draft.code.trim().toUpperCase();
@@ -107,10 +123,10 @@ export function createSign(draft) {
     };
     writeData([...items, sign]);
     return sign;
-  });
+  }, signal);
 }
 
-export function updateSign(id, changes) {
+export function updateSign(id, changes, signal) {
   return fakeRequest(() => {
     const numericId = Number(id);
     const items = readData();
@@ -118,10 +134,10 @@ export function updateSign(id, changes) {
     const next = items.map((item) => (item.id === numericId ? { ...item, ...changes, id: numericId } : item));
     writeData(next);
     return next.find((item) => item.id === numericId);
-  });
+  }, signal);
 }
 
-export function getSignStats(category = "all") {
+export function getSignStats(category = "all", signal) {
   return fakeRequest(() => {
     let items = readData();
     if (category !== "all") items = items.filter((sign) => sign.category === category);
@@ -155,5 +171,5 @@ export function getSignStats(category = "all") {
         .map(([shape, count]) => ({ shape, count })),
       examples,
     };
-  });
+  }, signal);
 }

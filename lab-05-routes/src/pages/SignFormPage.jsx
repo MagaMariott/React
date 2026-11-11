@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import { categoryOptions, shapeFor } from "../labels.js";
-import { createSign } from "../services/service.js";
+import { useCreateSign } from "../hooks/useSignQueries.js";
 
 const empty = {
   name: "",
@@ -13,8 +13,8 @@ const empty = {
 
 export default function SignFormPage() {
   const navigate = useNavigate();
+  const create = useCreateSign();
   const [fields, setFields] = useState(empty);
-  const [pending, setPending] = useState(false);
   const [error, setError] = useState("");
 
   function setField(name, value) {
@@ -23,7 +23,7 @@ export default function SignFormPage() {
 
   function submit(event) {
     event.preventDefault();
-    if (pending) return;
+    if (create.isPending) return;
     const name = fields.name.trim();
     const code = fields.code.trim();
     const meaning = fields.meaning.trim();
@@ -31,22 +31,21 @@ export default function SignFormPage() {
       setError("Name, code, and meaning are required.");
       return;
     }
-    setPending(true);
     setError("");
-    createSign({
-      name,
-      code,
-      category: fields.category,
-      shape: shapeFor[fields.category],
-      meaning,
-      note: fields.note,
-    })
-      .then((sign) => navigate(`/signs/${sign.id}`))
-      .catch((reason) => {
-        setPending(false);
-        setError(reason.message);
-      });
+    create.mutate(
+      {
+        name,
+        code,
+        category: fields.category,
+        shape: shapeFor[fields.category],
+        meaning,
+        note: fields.note,
+      },
+      { onSuccess: (sign) => navigate(`/signs/${sign.id}`) },
+    );
   }
+
+  const message = error || create.error?.message;
 
   return (
     <form className="form" onSubmit={submit}>
@@ -80,12 +79,12 @@ export default function SignFormPage() {
         <textarea value={fields.note} onChange={(event) => setField("note", event.target.value)} rows={2} />
       </label>
       <p className="hint">Shape is taken from the kind: {shapeFor[fields.category]}.</p>
-      {error ? <p className="banner">{error}</p> : null}
+      {message ? <p className="banner">{message}</p> : null}
       <div className="row">
-        <button type="submit" className="solid" disabled={pending}>
-          {pending ? "Saving…" : "Save sign"}
+        <button type="submit" className="solid" disabled={create.isPending}>
+          {create.isPending ? "Saving…" : "Save sign"}
         </button>
-        <button type="button" onClick={() => navigate("/signs")} disabled={pending}>
+        <button type="button" onClick={() => navigate("/signs")} disabled={create.isPending}>
           Cancel
         </button>
       </div>
