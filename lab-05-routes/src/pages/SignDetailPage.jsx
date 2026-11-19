@@ -1,11 +1,15 @@
 import { Link, useNavigate, useParams } from "react-router";
+import CachedNotice from "../components/CachedNotice.jsx";
 import { categoryLabel } from "../labels.js";
+import { useConnectivity } from "../hooks/useConnectivity.js";
 import { useSignDetail, useUpdateSign } from "../hooks/useSignQueries.js";
 
 export default function SignDetailPage() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { data: sign, error, isPending, isError, refetch } = useSignDetail(id);
+  const connection = useConnectivity();
+  const { data, error, isPending, isError, refetch } = useSignDetail(id);
+  const sign = data?.sign;
   const learned = useUpdateSign();
 
   function toggleLearned() {
@@ -53,6 +57,7 @@ export default function SignDetailPage() {
           All signs
         </Link>
       </div>
+      <CachedNotice cachedAt={data.cachedAt} offline={!connection.online} />
       <p className="code">{sign.code}</p>
       <h1>{sign.name}</h1>
       <dl className="facts">

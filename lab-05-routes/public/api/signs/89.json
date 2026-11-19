@@ -1,0 +1,8 @@
+{
+  "id": 89,
+  "code": "I-12",
+  "name": "Taxi",
+  "category": "information",
+  "shape": "rectangle",
+  "meaning": "A taxi rank."
+}

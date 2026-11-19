@@ -1,12 +1,15 @@
 import { useEffect } from "react";
+import CachedNotice from "../components/CachedNotice.jsx";
 import FilterBar from "../components/FilterBar.jsx";
 import Pagination from "../components/Pagination.jsx";
 import { SignCard } from "../components/SignCard.jsx";
+import { useConnectivity } from "../hooks/useConnectivity.js";
 import { useSignList } from "../hooks/useSignQueries.js";
 import { useSignQuery } from "../hooks/useSignQuery.js";
 
 export default function SignListPage() {
   const { query, update } = useSignQuery();
+  const connection = useConnectivity();
   const { data, error, isPending, isFetching, isError, isSuccess, refetch } = useSignList(query);
 
   useEffect(() => {
@@ -18,6 +21,7 @@ export default function SignListPage() {
     <div>
       <h1>Signs</h1>
       <FilterBar query={query} onChange={update} />
+      <CachedNotice cachedAt={data?.cachedAt} offline={!connection.online && Boolean(data)} />
       {isPending ? <p className="state">Loading the signs…</p> : null}
       {isFetching && !isPending ? <p className="hint">Updating the list…</p> : null}
       {isError ? (

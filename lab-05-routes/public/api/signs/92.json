@@ -1,0 +1,8 @@
+{
+  "id": 92,
+  "code": "I-15",
+  "name": "Pedestrian zone",
+  "category": "information",
+  "shape": "rectangle",
+  "meaning": "The area is meant for people on foot."
+}

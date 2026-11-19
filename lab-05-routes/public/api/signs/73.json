@@ -1,0 +1,8 @@
+{
+  "id": 73,
+  "code": "M-11",
+  "name": "Footpath",
+  "category": "mandatory",
+  "shape": "circle",
+  "meaning": "Pedestrians must use this path."
+}

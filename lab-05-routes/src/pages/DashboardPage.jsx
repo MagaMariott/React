@@ -1,9 +1,12 @@
 import { Link, useSearchParams } from "react-router";
+import CachedNotice from "../components/CachedNotice.jsx";
 import { categoryLabel, categoryOptions } from "../labels.js";
+import { useConnectivity } from "../hooks/useConnectivity.js";
 import { useSignStats } from "../hooks/useSignQueries.js";
 
 export default function DashboardPage() {
   const [params, setParams] = useSearchParams();
+  const connection = useConnectivity();
   const requested = params.get("category") || "all";
   const category = requested === "all" || categoryOptions.some((item) => item.value === requested) ? requested : "all";
   const { data, error, isPending, isFetching, isError, refetch } = useSignStats(category);
@@ -13,7 +16,8 @@ export default function DashboardPage() {
   return (
     <div>
       <h1>Dashboard</h1>
-      <p className="lede">Counts come from the sign service. The same kind is cached for a minute, then fetched again.</p>
+      <p className="lede">Counts come from the sign service. The same kind stays in TanStack Query for a minute. Offline, a saved API copy is used when one exists.</p>
+      <CachedNotice cachedAt={data?.cachedAt} offline={!connection.online && Boolean(data)} />
       <label className="narrow">
         Kind
         <select

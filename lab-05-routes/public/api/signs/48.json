@@ -1,0 +1,8 @@
+{
+  "id": 48,
+  "code": "P-13",
+  "name": "Height limit",
+  "category": "prohibitory",
+  "shape": "circle",
+  "meaning": "Vehicles taller than the signed height must turn back."
+}

@@ -1,0 +1,8 @@
+{
+  "id": 82,
+  "code": "I-05",
+  "name": "Telephone",
+  "category": "information",
+  "shape": "rectangle",
+  "meaning": "A public telephone is nearby."
+}

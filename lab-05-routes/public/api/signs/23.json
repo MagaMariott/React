@@ -1,0 +1,8 @@
+{
+  "id": 23,
+  "code": "W-23",
+  "name": "Crosswinds",
+  "category": "warning",
+  "shape": "triangle",
+  "meaning": "Strong side wind on an open stretch."
+}

@@ -1,0 +1,8 @@
+{
+  "id": 47,
+  "code": "P-12",
+  "name": "Weight limit",
+  "category": "prohibitory",
+  "shape": "circle",
+  "meaning": "Vehicles over the signed mass may not pass."
+}

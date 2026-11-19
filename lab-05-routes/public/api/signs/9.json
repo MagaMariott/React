@@ -1,0 +1,8 @@
+{
+  "id": 9,
+  "code": "W-09",
+  "name": "Loose gravel",
+  "category": "warning",
+  "shape": "triangle",
+  "meaning": "Loose stones can be thrown by the wheels."
+}

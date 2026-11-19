@@ -1,0 +1,8 @@
+{
+  "id": 25,
+  "code": "W-25",
+  "name": "Tunnel",
+  "category": "warning",
+  "shape": "triangle",
+  "meaning": "A tunnel starts ahead. Lights on."
+}

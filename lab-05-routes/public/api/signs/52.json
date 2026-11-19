@@ -1,0 +1,8 @@
+{
+  "id": 52,
+  "code": "P-17",
+  "name": "No right turn",
+  "category": "prohibitory",
+  "shape": "circle",
+  "meaning": "Turning right is forbidden at this junction."
+}

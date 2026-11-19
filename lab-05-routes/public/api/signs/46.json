@@ -1,0 +1,8 @@
+{
+  "id": 46,
+  "code": "P-11",
+  "name": "No hazardous cargo",
+  "category": "prohibitory",
+  "shape": "circle",
+  "meaning": "Vehicles with dangerous goods are banned."
+}

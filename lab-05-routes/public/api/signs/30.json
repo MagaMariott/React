@@ -1,0 +1,8 @@
+{
+  "id": 30,
+  "code": "W-30",
+  "name": "Crossroads",
+  "category": "warning",
+  "shape": "triangle",
+  "meaning": "An intersection with a side road."
+}

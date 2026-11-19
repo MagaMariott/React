@@ -1,0 +1,8 @@
+{
+  "id": 16,
+  "code": "W-16",
+  "name": "Traffic signals",
+  "category": "warning",
+  "shape": "triangle",
+  "meaning": "A signalised junction is coming up."
+}

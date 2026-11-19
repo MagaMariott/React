@@ -1,0 +1,8 @@
+{
+  "id": 91,
+  "code": "I-14",
+  "name": "One-way street",
+  "category": "information",
+  "shape": "rectangle",
+  "meaning": "Traffic on this street moves in one direction."
+}

@@ -1,0 +1,8 @@
+{
+  "id": 1,
+  "code": "W-01",
+  "name": "Dangerous bend to the left",
+  "category": "warning",
+  "shape": "triangle",
+  "meaning": "The road bends sharply to the left."
+}

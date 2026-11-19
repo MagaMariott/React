@@ -1,0 +1,8 @@
+{
+  "id": 59,
+  "code": "P-24",
+  "name": "End of speed limit",
+  "category": "prohibitory",
+  "shape": "circle",
+  "meaning": "The previous speed limit no longer applies."
+}

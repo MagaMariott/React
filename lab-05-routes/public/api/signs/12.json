@@ -1,0 +1,8 @@
+{
+  "id": 12,
+  "code": "W-12",
+  "name": "Road narrows on the right",
+  "category": "warning",
+  "shape": "triangle",
+  "meaning": "The right side of the road closes in."
+}

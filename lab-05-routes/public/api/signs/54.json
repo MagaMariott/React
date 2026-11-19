@@ -1,0 +1,8 @@
+{
+  "id": 54,
+  "code": "P-19",
+  "name": "No overtaking",
+  "category": "prohibitory",
+  "shape": "circle",
+  "meaning": "Do not pass a moving motor vehicle."
+}

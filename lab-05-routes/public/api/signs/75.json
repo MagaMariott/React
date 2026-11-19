@@ -1,0 +1,8 @@
+{
+  "id": 75,
+  "code": "M-13",
+  "name": "Minimum speed 40",
+  "category": "mandatory",
+  "shape": "circle",
+  "meaning": "Do not travel slower than 40 kilometres per hour."
+}

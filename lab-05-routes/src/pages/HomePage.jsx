@@ -8,7 +8,7 @@ export default function HomePage() {
         <p className="eyebrow">Study deck</p>
         <h1>Road signs you can open by address</h1>
         <p className="lede">
-          Search, kind, progress, and the open sign stay in the URL. Refresh the page, or use Back and Forward, and the same screen comes back.
+          Search, kind, progress, and the open sign stay in the URL. After the first visit, the shell and the signs you opened stay on this device when the network drops.
         </p>
         <div className="row">
           <Link to="/signs" className="button solid">
@@ -17,8 +17,8 @@ export default function HomePage() {
           <Link to="/dashboard" className="button">
             Dashboard
           </Link>
-          <Link to="/about" className="button">
-            About
+          <Link to="/offline" className="button">
+            Offline page
           </Link>
         </div>
       </div>

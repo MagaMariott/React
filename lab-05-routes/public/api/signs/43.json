@@ -1,0 +1,8 @@
+{
+  "id": 43,
+  "code": "P-08",
+  "name": "No buses",
+  "category": "prohibitory",
+  "shape": "circle",
+  "meaning": "Buses may not use this road."
+}

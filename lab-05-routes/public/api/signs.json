@@ -1,0 +1,812 @@
+{
+  "signs": [
+    {
+      "id": 1,
+      "code": "W-01",
+      "name": "Dangerous bend to the left",
+      "category": "warning",
+      "shape": "triangle",
+      "meaning": "The road bends sharply to the left."
+    },
+    {
+      "id": 2,
+      "code": "W-02",
+      "name": "Dangerous bend to the right",
+      "category": "warning",
+      "shape": "triangle",
+      "meaning": "The road bends sharply to the right."
+    },
+    {
+      "id": 3,
+      "code": "W-03",
+      "name": "Double bend, first left",
+      "category": "warning",
+      "shape": "triangle",
+      "meaning": "Two bends follow, and the first is to the left."
+    },
+    {
+      "id": 4,
+      "code": "W-04",
+      "name": "Double bend, first right",
+      "category": "warning",
+      "shape": "triangle",
+      "meaning": "Two bends follow, and the first is to the right."
+    },
+    {
+      "id": 5,
+      "code": "W-05",
+      "name": "Steep descent",
+      "category": "warning",
+      "shape": "triangle",
+      "meaning": "A steep downhill stretch starts here."
+    },
+    {
+      "id": 6,
+      "code": "W-06",
+      "name": "Steep ascent",
+      "category": "warning",
+      "shape": "triangle",
+      "meaning": "A steep uphill stretch starts here."
+    },
+    {
+      "id": 7,
+      "code": "W-07",
+      "name": "Slippery road",
+      "category": "warning",
+      "shape": "triangle",
+      "meaning": "The surface may be slippery, especially in rain."
+    },
+    {
+      "id": 8,
+      "code": "W-08",
+      "name": "Uneven road",
+      "category": "warning",
+      "shape": "triangle",
+      "meaning": "Bumps, dips, or a rough surface ahead."
+    },
+    {
+      "id": 9,
+      "code": "W-09",
+      "name": "Loose gravel",
+      "category": "warning",
+      "shape": "triangle",
+      "meaning": "Loose stones can be thrown by the wheels."
+    },
+    {
+      "id": 10,
+      "code": "W-10",
+      "name": "Road narrows",
+      "category": "warning",
+      "shape": "triangle",
+      "meaning": "The carriageway becomes narrower on both sides."
+    },
+    {
+      "id": 11,
+      "code": "W-11",
+      "name": "Road narrows on the left",
+      "category": "warning",
+      "shape": "triangle",
+      "meaning": "The left side of the road closes in."
+    },
+    {
+      "id": 12,
+      "code": "W-12",
+      "name": "Road narrows on the right",
+      "category": "warning",
+      "shape": "triangle",
+      "meaning": "The right side of the road closes in."
+    },
+    {
+      "id": 13,
+      "code": "W-13",
+      "name": "Opening bridge",
+      "category": "warning",
+      "shape": "triangle",
+      "meaning": "A bridge ahead can open for boats."
+    },
+    {
+      "id": 14,
+      "code": "W-14",
+      "name": "Quayside",
+      "category": "warning",
+      "shape": "triangle",
+      "meaning": "The road runs next to water without a barrier."
+    },
+    {
+      "id": 15,
+      "code": "W-15",
+      "name": "Road works",
+      "category": "warning",
+      "shape": "triangle",
+      "meaning": "People and machines may be working on the road."
+    },
+    {
+      "id": 16,
+      "code": "W-16",
+      "name": "Traffic signals",
+      "category": "warning",
+      "shape": "triangle",
+      "meaning": "A signalised junction is coming up."
+    },
+    {
+      "id": 17,
+      "code": "W-17",
+      "name": "Pedestrian crossing",
+      "category": "warning",
+      "shape": "triangle",
+      "meaning": "A crossing used by people on foot."
+    },
+    {
+      "id": 18,
+      "code": "W-18",
+      "name": "Children",
+      "category": "warning",
+      "shape": "triangle",
+      "meaning": "Children may cross, often near a school."
+    },
+    {
+      "id": 19,
+      "code": "W-19",
+      "name": "Cyclists",
+      "category": "warning",
+      "shape": "triangle",
+      "meaning": "Cyclists may enter or cross the road."
+    },
+    {
+      "id": 20,
+      "code": "W-20",
+      "name": "Cattle",
+      "category": "warning",
+      "shape": "triangle",
+      "meaning": "Farm animals may be on the road."
+    },
+    {
+      "id": 21,
+      "code": "W-21",
+      "name": "Wild animals",
+      "category": "warning",
+      "shape": "triangle",
+      "meaning": "Wild animals may cross, often at dusk."
+    },
+    {
+      "id": 22,
+      "code": "W-22",
+      "name": "Falling rocks",
+      "category": "warning",
+      "shape": "triangle",
+      "meaning": "Rocks may fall onto the carriageway."
+    },
+    {
+      "id": 23,
+      "code": "W-23",
+      "name": "Crosswinds",
+      "category": "warning",
+      "shape": "triangle",
+      "meaning": "Strong side wind on an open stretch."
+    },
+    {
+      "id": 24,
+      "code": "W-24",
+      "name": "Low-flying aircraft",
+      "category": "warning",
+      "shape": "triangle",
+      "meaning": "Aircraft pass low over the road."
+    },
+    {
+      "id": 25,
+      "code": "W-25",
+      "name": "Tunnel",
+      "category": "warning",
+      "shape": "triangle",
+      "meaning": "A tunnel starts ahead. Lights on."
+    },
+    {
+      "id": 26,
+      "code": "W-26",
+      "name": "Other danger",
+      "category": "warning",
+      "shape": "triangle",
+      "meaning": "A hazard that has no sign of its own."
+    },
+    {
+      "id": 27,
+      "code": "W-27",
+      "name": "Level crossing with barriers",
+      "category": "warning",
+      "shape": "triangle",
+      "meaning": "A railway crossing with gates or barriers."
+    },
+    {
+      "id": 28,
+      "code": "W-28",
+      "name": "Level crossing without barriers",
+      "category": "warning",
+      "shape": "triangle",
+      "meaning": "A railway crossing with no gates."
+    },
+    {
+      "id": 29,
+      "code": "W-29",
+      "name": "Tram crossing",
+      "category": "warning",
+      "shape": "triangle",
+      "meaning": "Tram tracks cross the road."
+    },
+    {
+      "id": 30,
+      "code": "W-30",
+      "name": "Crossroads",
+      "category": "warning",
+      "shape": "triangle",
+      "meaning": "An intersection with a side road."
+    },
+    {
+      "id": 31,
+      "code": "W-31",
+      "name": "Roundabout ahead",
+      "category": "warning",
+      "shape": "triangle",
+      "meaning": "A roundabout is coming. Give way as signed."
+    },
+    {
+      "id": 32,
+      "code": "W-32",
+      "name": "Two-way traffic",
+      "category": "warning",
+      "shape": "triangle",
+      "meaning": "One-way flow ends and opposing traffic begins."
+    },
+    {
+      "id": 33,
+      "code": "W-33",
+      "name": "Traffic queues",
+      "category": "warning",
+      "shape": "triangle",
+      "meaning": "Standing or slow traffic is likely."
+    },
+    {
+      "id": 34,
+      "code": "W-34",
+      "name": "Soft verge",
+      "category": "warning",
+      "shape": "triangle",
+      "meaning": "The edge of the road is soft. Do not pull off hard."
+    },
+    {
+      "id": 35,
+      "code": "W-35",
+      "name": "Ice",
+      "category": "warning",
+      "shape": "triangle",
+      "meaning": "The road may be icy."
+    },
+    {
+      "id": 36,
+      "code": "P-01",
+      "name": "No entry",
+      "category": "prohibitory",
+      "shape": "circle",
+      "meaning": "Do not enter from this direction."
+    },
+    {
+      "id": 37,
+      "code": "P-02",
+      "name": "Closed to all vehicles",
+      "category": "prohibitory",
+      "shape": "circle",
+      "meaning": "No vehicles may pass this point."
+    },
+    {
+      "id": 38,
+      "code": "P-03",
+      "name": "No motor vehicles",
+      "category": "prohibitory",
+      "shape": "circle",
+      "meaning": "Cars and motorcycles are not allowed."
+    },
+    {
+      "id": 39,
+      "code": "P-04",
+      "name": "No motorcycles",
+      "category": "prohibitory",
+      "shape": "circle",
+      "meaning": "Motorcycles may not pass."
+    },
+    {
+      "id": 40,
+      "code": "P-05",
+      "name": "No bicycles",
+      "category": "prohibitory",
+      "shape": "circle",
+      "meaning": "Cycling is not allowed beyond the sign."
+    },
+    {
+      "id": 41,
+      "code": "P-06",
+      "name": "No pedestrians",
+      "category": "prohibitory",
+      "shape": "circle",
+      "meaning": "People on foot may not enter."
+    },
+    {
+      "id": 42,
+      "code": "P-07",
+      "name": "No trucks",
+      "category": "prohibitory",
+      "shape": "circle",
+      "meaning": "Goods vehicles are banned."
+    },
+    {
+      "id": 43,
+      "code": "P-08",
+      "name": "No buses",
+      "category": "prohibitory",
+      "shape": "circle",
+      "meaning": "Buses may not use this road."
+    },
+    {
+      "id": 44,
+      "code": "P-09",
+      "name": "No tractors",
+      "category": "prohibitory",
+      "shape": "circle",
+      "meaning": "Tractors and slow farm vehicles are banned."
+    },
+    {
+      "id": 45,
+      "code": "P-10",
+      "name": "No trailers",
+      "category": "prohibitory",
+      "shape": "circle",
+      "meaning": "Vehicles towing a trailer may not pass."
+    },
+    {
+      "id": 46,
+      "code": "P-11",
+      "name": "No hazardous cargo",
+      "category": "prohibitory",
+      "shape": "circle",
+      "meaning": "Vehicles with dangerous goods are banned."
+    },
+    {
+      "id": 47,
+      "code": "P-12",
+      "name": "Weight limit",
+      "category": "prohibitory",
+      "shape": "circle",
+      "meaning": "Vehicles over the signed mass may not pass."
+    },
+    {
+      "id": 48,
+      "code": "P-13",
+      "name": "Height limit",
+      "category": "prohibitory",
+      "shape": "circle",
+      "meaning": "Vehicles taller than the signed height must turn back."
+    },
+    {
+      "id": 49,
+      "code": "P-14",
+      "name": "Width limit",
+      "category": "prohibitory",
+      "shape": "circle",
+      "meaning": "Vehicles wider than the signed width must turn back."
+    },
+    {
+      "id": 50,
+      "code": "P-15",
+      "name": "Length limit",
+      "category": "prohibitory",
+      "shape": "circle",
+      "meaning": "Vehicles longer than the signed length are banned."
+    },
+    {
+      "id": 51,
+      "code": "P-16",
+      "name": "No left turn",
+      "category": "prohibitory",
+      "shape": "circle",
+      "meaning": "Turning left is forbidden at this junction."
+    },
+    {
+      "id": 52,
+      "code": "P-17",
+      "name": "No right turn",
+      "category": "prohibitory",
+      "shape": "circle",
+      "meaning": "Turning right is forbidden at this junction."
+    },
+    {
+      "id": 53,
+      "code": "P-18",
+      "name": "No U-turn",
+      "category": "prohibitory",
+      "shape": "circle",
+      "meaning": "Turning around is forbidden."
+    },
+    {
+      "id": 54,
+      "code": "P-19",
+      "name": "No overtaking",
+      "category": "prohibitory",
+      "shape": "circle",
+      "meaning": "Do not pass a moving motor vehicle."
+    },
+    {
+      "id": 55,
+      "code": "P-20",
+      "name": "End of no overtaking",
+      "category": "prohibitory",
+      "shape": "circle",
+      "meaning": "The overtaking ban ends here."
+    },
+    {
+      "id": 56,
+      "code": "P-21",
+      "name": "Speed limit 40",
+      "category": "prohibitory",
+      "shape": "circle",
+      "meaning": "Do not exceed 40 kilometres per hour."
+    },
+    {
+      "id": 57,
+      "code": "P-22",
+      "name": "Speed limit 60",
+      "category": "prohibitory",
+      "shape": "circle",
+      "meaning": "Do not exceed 60 kilometres per hour."
+    },
+    {
+      "id": 58,
+      "code": "P-23",
+      "name": "Speed limit 90",
+      "category": "prohibitory",
+      "shape": "circle",
+      "meaning": "Do not exceed 90 kilometres per hour."
+    },
+    {
+      "id": 59,
+      "code": "P-24",
+      "name": "End of speed limit",
+      "category": "prohibitory",
+      "shape": "circle",
+      "meaning": "The previous speed limit no longer applies."
+    },
+    {
+      "id": 60,
+      "code": "P-25",
+      "name": "No stopping",
+      "category": "prohibitory",
+      "shape": "circle",
+      "meaning": "Stopping is forbidden, even briefly."
+    },
+    {
+      "id": 61,
+      "code": "P-26",
+      "name": "No parking",
+      "category": "prohibitory",
+      "shape": "circle",
+      "meaning": "Parking is forbidden. A short stop may be allowed."
+    },
+    {
+      "id": 62,
+      "code": "P-27",
+      "name": "No horns",
+      "category": "prohibitory",
+      "shape": "circle",
+      "meaning": "Sound signals are forbidden except to avoid danger."
+    },
+    {
+      "id": 63,
+      "code": "M-01",
+      "name": "Ahead only",
+      "category": "mandatory",
+      "shape": "circle",
+      "meaning": "Continue straight. Do not turn."
+    },
+    {
+      "id": 64,
+      "code": "M-02",
+      "name": "Turn left",
+      "category": "mandatory",
+      "shape": "circle",
+      "meaning": "The only permitted direction is left."
+    },
+    {
+      "id": 65,
+      "code": "M-03",
+      "name": "Turn right",
+      "category": "mandatory",
+      "shape": "circle",
+      "meaning": "The only permitted direction is right."
+    },
+    {
+      "id": 66,
+      "code": "M-04",
+      "name": "Straight or left",
+      "category": "mandatory",
+      "shape": "circle",
+      "meaning": "You may go straight or turn left."
+    },
+    {
+      "id": 67,
+      "code": "M-05",
+      "name": "Straight or right",
+      "category": "mandatory",
+      "shape": "circle",
+      "meaning": "You may go straight or turn right."
+    },
+    {
+      "id": 68,
+      "code": "M-06",
+      "name": "Keep left",
+      "category": "mandatory",
+      "shape": "circle",
+      "meaning": "Pass the obstacle on its left."
+    },
+    {
+      "id": 69,
+      "code": "M-07",
+      "name": "Keep right",
+      "category": "mandatory",
+      "shape": "circle",
+      "meaning": "Pass the obstacle on its right."
+    },
+    {
+      "id": 70,
+      "code": "M-08",
+      "name": "Pass either side",
+      "category": "mandatory",
+      "shape": "circle",
+      "meaning": "You may pass the obstacle on either side."
+    },
+    {
+      "id": 71,
+      "code": "M-09",
+      "name": "Roundabout",
+      "category": "mandatory",
+      "shape": "circle",
+      "meaning": "Enter the roundabout in the signed direction."
+    },
+    {
+      "id": 72,
+      "code": "M-10",
+      "name": "Cycle track",
+      "category": "mandatory",
+      "shape": "circle",
+      "meaning": "Cyclists must use this track."
+    },
+    {
+      "id": 73,
+      "code": "M-11",
+      "name": "Footpath",
+      "category": "mandatory",
+      "shape": "circle",
+      "meaning": "Pedestrians must use this path."
+    },
+    {
+      "id": 74,
+      "code": "M-12",
+      "name": "Shared path",
+      "category": "mandatory",
+      "shape": "circle",
+      "meaning": "The path is for both cyclists and pedestrians."
+    },
+    {
+      "id": 75,
+      "code": "M-13",
+      "name": "Minimum speed 40",
+      "category": "mandatory",
+      "shape": "circle",
+      "meaning": "Do not travel slower than 40 kilometres per hour."
+    },
+    {
+      "id": 76,
+      "code": "M-14",
+      "name": "Snow chains",
+      "category": "mandatory",
+      "shape": "circle",
+      "meaning": "Snow chains are required from here."
+    },
+    {
+      "id": 77,
+      "code": "M-15",
+      "name": "End of minimum speed",
+      "category": "mandatory",
+      "shape": "circle",
+      "meaning": "The minimum speed no longer applies."
+    },
+    {
+      "id": 78,
+      "code": "I-01",
+      "name": "Parking",
+      "category": "information",
+      "shape": "rectangle",
+      "meaning": "A place where parking is provided."
+    },
+    {
+      "id": 79,
+      "code": "I-02",
+      "name": "Hospital",
+      "category": "information",
+      "shape": "rectangle",
+      "meaning": "A hospital is signed from here."
+    },
+    {
+      "id": 80,
+      "code": "I-03",
+      "name": "First aid",
+      "category": "information",
+      "shape": "rectangle",
+      "meaning": "Medical help is available nearby."
+    },
+    {
+      "id": 81,
+      "code": "I-04",
+      "name": "Filling station",
+      "category": "information",
+      "shape": "rectangle",
+      "meaning": "Fuel is available in the signed direction."
+    },
+    {
+      "id": 82,
+      "code": "I-05",
+      "name": "Telephone",
+      "category": "information",
+      "shape": "rectangle",
+      "meaning": "A public telephone is nearby."
+    },
+    {
+      "id": 83,
+      "code": "I-06",
+      "name": "Restaurant",
+      "category": "information",
+      "shape": "rectangle",
+      "meaning": "A place to eat is signed from here."
+    },
+    {
+      "id": 84,
+      "code": "I-07",
+      "name": "Hotel",
+      "category": "information",
+      "shape": "rectangle",
+      "meaning": "Lodging is signed from here."
+    },
+    {
+      "id": 85,
+      "code": "I-08",
+      "name": "Camping",
+      "category": "information",
+      "shape": "rectangle",
+      "meaning": "A campsite is signed from here."
+    },
+    {
+      "id": 86,
+      "code": "I-09",
+      "name": "Picnic site",
+      "category": "information",
+      "shape": "rectangle",
+      "meaning": "A place to stop and eat outdoors."
+    },
+    {
+      "id": 87,
+      "code": "I-10",
+      "name": "Bus stop",
+      "category": "information",
+      "shape": "rectangle",
+      "meaning": "Buses stop here."
+    },
+    {
+      "id": 88,
+      "code": "I-11",
+      "name": "Tram stop",
+      "category": "information",
+      "shape": "rectangle",
+      "meaning": "Trams stop here."
+    },
+    {
+      "id": 89,
+      "code": "I-12",
+      "name": "Taxi",
+      "category": "information",
+      "shape": "rectangle",
+      "meaning": "A taxi rank."
+    },
+    {
+      "id": 90,
+      "code": "I-13",
+      "name": "Dead end",
+      "category": "information",
+      "shape": "rectangle",
+      "meaning": "The road does not continue through."
+    },
+    {
+      "id": 91,
+      "code": "I-14",
+      "name": "One-way street",
+      "category": "information",
+      "shape": "rectangle",
+      "meaning": "Traffic on this street moves in one direction."
+    },
+    {
+      "id": 92,
+      "code": "I-15",
+      "name": "Pedestrian zone",
+      "category": "information",
+      "shape": "rectangle",
+      "meaning": "The area is meant for people on foot."
+    },
+    {
+      "id": 93,
+      "code": "I-16",
+      "name": "Living street",
+      "category": "information",
+      "shape": "rectangle",
+      "meaning": "A shared street. People on foot have priority."
+    },
+    {
+      "id": 94,
+      "code": "I-17",
+      "name": "Motorway",
+      "category": "information",
+      "shape": "rectangle",
+      "meaning": "Motorway rules begin."
+    },
+    {
+      "id": 95,
+      "code": "I-18",
+      "name": "End of motorway",
+      "category": "information",
+      "shape": "rectangle",
+      "meaning": "Motorway rules end."
+    },
+    {
+      "id": 96,
+      "code": "R-01",
+      "name": "Give way",
+      "category": "priority",
+      "shape": "inverted",
+      "meaning": "Give way to traffic on the crossing road."
+    },
+    {
+      "id": 97,
+      "code": "R-02",
+      "name": "Stop",
+      "category": "priority",
+      "shape": "octagon",
+      "meaning": "Stop completely, then give way."
+    },
+    {
+      "id": 98,
+      "code": "R-03",
+      "name": "Priority road",
+      "category": "priority",
+      "shape": "diamond",
+      "meaning": "You are on the priority road."
+    },
+    {
+      "id": 99,
+      "code": "R-04",
+      "name": "End of priority road",
+      "category": "priority",
+      "shape": "diamond",
+      "meaning": "The priority road ends."
+    },
+    {
+      "id": 100,
+      "code": "R-05",
+      "name": "Priority over oncoming vehicles",
+      "category": "priority",
+      "shape": "rectangle",
+      "meaning": "Oncoming traffic must wait for you."
+    },
+    {
+      "id": 101,
+      "code": "R-06",
+      "name": "Give way to oncoming vehicles",
+      "category": "priority",
+      "shape": "rectangle",
+      "meaning": "Wait if an oncoming vehicle is already in the narrow stretch."
+    }
+  ]
+}

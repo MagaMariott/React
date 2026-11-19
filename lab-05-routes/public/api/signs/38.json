@@ -1,0 +1,8 @@
+{
+  "id": 38,
+  "code": "P-03",
+  "name": "No motor vehicles",
+  "category": "prohibitory",
+  "shape": "circle",
+  "meaning": "Cars and motorcycles are not allowed."
+}

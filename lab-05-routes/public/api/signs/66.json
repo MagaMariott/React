@@ -1,0 +1,8 @@
+{
+  "id": 66,
+  "code": "M-04",
+  "name": "Straight or left",
+  "category": "mandatory",
+  "shape": "circle",
+  "meaning": "You may go straight or turn left."
+}

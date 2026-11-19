@@ -1,0 +1,8 @@
+{
+  "id": 65,
+  "code": "M-03",
+  "name": "Turn right",
+  "category": "mandatory",
+  "shape": "circle",
+  "meaning": "The only permitted direction is right."
+}

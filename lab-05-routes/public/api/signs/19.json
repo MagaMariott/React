@@ -1,0 +1,8 @@
+{
+  "id": 19,
+  "code": "W-19",
+  "name": "Cyclists",
+  "category": "warning",
+  "shape": "triangle",
+  "meaning": "Cyclists may enter or cross the road."
+}

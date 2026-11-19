@@ -1,0 +1,8 @@
+{
+  "id": 34,
+  "code": "W-34",
+  "name": "Soft verge",
+  "category": "warning",
+  "shape": "triangle",
+  "meaning": "The edge of the road is soft. Do not pull off hard."
+}

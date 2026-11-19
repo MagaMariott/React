@@ -1,0 +1,8 @@
+{
+  "id": 41,
+  "code": "P-06",
+  "name": "No pedestrians",
+  "category": "prohibitory",
+  "shape": "circle",
+  "meaning": "People on foot may not enter."
+}

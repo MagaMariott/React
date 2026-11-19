@@ -1,0 +1,8 @@
+{
+  "id": 53,
+  "code": "P-18",
+  "name": "No U-turn",
+  "category": "prohibitory",
+  "shape": "circle",
+  "meaning": "Turning around is forbidden."
+}

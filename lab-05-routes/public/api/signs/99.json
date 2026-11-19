@@ -1,0 +1,8 @@
+{
+  "id": 99,
+  "code": "R-04",
+  "name": "End of priority road",
+  "category": "priority",
+  "shape": "diamond",
+  "meaning": "The priority road ends."
+}

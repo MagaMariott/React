@@ -1,0 +1,8 @@
+{
+  "id": 17,
+  "code": "W-17",
+  "name": "Pedestrian crossing",
+  "category": "warning",
+  "shape": "triangle",
+  "meaning": "A crossing used by people on foot."
+}

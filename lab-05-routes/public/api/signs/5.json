@@ -1,0 +1,8 @@
+{
+  "id": 5,
+  "code": "W-05",
+  "name": "Steep descent",
+  "category": "warning",
+  "shape": "triangle",
+  "meaning": "A steep downhill stretch starts here."
+}

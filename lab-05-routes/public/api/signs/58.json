@@ -1,0 +1,8 @@
+{
+  "id": 58,
+  "code": "P-23",
+  "name": "Speed limit 90",
+  "category": "prohibitory",
+  "shape": "circle",
+  "meaning": "Do not exceed 90 kilometres per hour."
+}

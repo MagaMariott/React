@@ -1,0 +1,8 @@
+{
+  "id": 72,
+  "code": "M-10",
+  "name": "Cycle track",
+  "category": "mandatory",
+  "shape": "circle",
+  "meaning": "Cyclists must use this track."
+}

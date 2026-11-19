@@ -1,0 +1,8 @@
+{
+  "id": 61,
+  "code": "P-26",
+  "name": "No parking",
+  "category": "prohibitory",
+  "shape": "circle",
+  "meaning": "Parking is forbidden. A short stop may be allowed."
+}

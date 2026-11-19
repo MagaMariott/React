@@ -1,0 +1,8 @@
+{
+  "id": 33,
+  "code": "W-33",
+  "name": "Traffic queues",
+  "category": "warning",
+  "shape": "triangle",
+  "meaning": "Standing or slow traffic is likely."
+}

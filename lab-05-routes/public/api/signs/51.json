@@ -1,0 +1,8 @@
+{
+  "id": 51,
+  "code": "P-16",
+  "name": "No left turn",
+  "category": "prohibitory",
+  "shape": "circle",
+  "meaning": "Turning left is forbidden at this junction."
+}

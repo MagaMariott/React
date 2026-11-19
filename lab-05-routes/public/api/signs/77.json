@@ -1,0 +1,8 @@
+{
+  "id": 77,
+  "code": "M-15",
+  "name": "End of minimum speed",
+  "category": "mandatory",
+  "shape": "circle",
+  "meaning": "The minimum speed no longer applies."
+}

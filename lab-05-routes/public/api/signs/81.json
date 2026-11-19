@@ -1,0 +1,8 @@
+{
+  "id": 81,
+  "code": "I-04",
+  "name": "Filling station",
+  "category": "information",
+  "shape": "rectangle",
+  "meaning": "Fuel is available in the signed direction."
+}

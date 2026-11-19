@@ -1,0 +1,8 @@
+{
+  "id": 100,
+  "code": "R-05",
+  "name": "Priority over oncoming vehicles",
+  "category": "priority",
+  "shape": "rectangle",
+  "meaning": "Oncoming traffic must wait for you."
+}

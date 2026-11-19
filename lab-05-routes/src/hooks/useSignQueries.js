@@ -33,7 +33,7 @@ export function useCreateSign() {
   return useMutation({
     mutationFn: (draft) => createSign(draft),
     onSuccess(sign) {
-      client.setQueryData(signKeys.detail(sign.id), sign);
+      client.setQueryData(signKeys.detail(sign.id), { sign, cachedAt: null });
       client.invalidateQueries({ queryKey: ["signs", "list"] });
       client.invalidateQueries({ queryKey: ["signs", "stats"] });
     },
@@ -45,7 +45,10 @@ export function useUpdateSign() {
   return useMutation({
     mutationFn: ({ id, changes }) => updateSign(id, changes),
     onSuccess(sign) {
-      client.setQueryData(signKeys.detail(sign.id), sign);
+      client.setQueryData(signKeys.detail(sign.id), (current) => ({
+        sign,
+        cachedAt: current?.cachedAt ?? null,
+      }));
       client.invalidateQueries({ queryKey: ["signs", "list"] });
       client.invalidateQueries({ queryKey: ["signs", "stats"] });
     },

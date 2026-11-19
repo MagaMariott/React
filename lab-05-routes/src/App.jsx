@@ -11,6 +11,7 @@ const DashboardPage = lazy(() => import("./pages/DashboardPage.jsx"));
 const LoginPage = lazy(() => import("./pages/LoginPage.jsx"));
 const SignupPage = lazy(() => import("./pages/SignupPage.jsx"));
 const ProfilePage = lazy(() => import("./pages/ProfilePage.jsx"));
+const OfflinePage = lazy(() => import("./pages/OfflinePage.jsx"));
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage.jsx"));
 const SignDetailPage = lazy(() => import("./pages/SignDetailPage.jsx"));
 const SignFormPage = lazy(() => import("./pages/SignFormPage.jsx"));
@@ -38,6 +39,7 @@ export default function App() {
               </RequireAuth>
             }
           />
+          <Route path="offline" element={<OfflinePage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>

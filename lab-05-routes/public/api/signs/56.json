@@ -1,0 +1,8 @@
+{
+  "id": 56,
+  "code": "P-21",
+  "name": "Speed limit 40",
+  "category": "prohibitory",
+  "shape": "circle",
+  "meaning": "Do not exceed 40 kilometres per hour."
+}

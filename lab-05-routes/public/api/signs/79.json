@@ -1,0 +1,8 @@
+{
+  "id": 79,
+  "code": "I-02",
+  "name": "Hospital",
+  "category": "information",
+  "shape": "rectangle",
+  "meaning": "A hospital is signed from here."
+}
