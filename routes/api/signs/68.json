@@ -1,0 +1,8 @@
+{
+  "id": 68,
+  "code": "M-06",
+  "name": "Keep left",
+  "category": "mandatory",
+  "shape": "circle",
+  "meaning": "Pass the obstacle on its left."
+}

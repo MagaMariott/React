@@ -1,0 +1,8 @@
+{
+  "id": 35,
+  "code": "W-35",
+  "name": "Ice",
+  "category": "warning",
+  "shape": "triangle",
+  "meaning": "The road may be icy."
+}

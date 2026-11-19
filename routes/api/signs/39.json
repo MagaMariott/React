@@ -1,0 +1,8 @@
+{
+  "id": 39,
+  "code": "P-04",
+  "name": "No motorcycles",
+  "category": "prohibitory",
+  "shape": "circle",
+  "meaning": "Motorcycles may not pass."
+}

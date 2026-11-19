@@ -1,0 +1,8 @@
+{
+  "id": 3,
+  "code": "W-03",
+  "name": "Double bend, first left",
+  "category": "warning",
+  "shape": "triangle",
+  "meaning": "Two bends follow, and the first is to the left."
+}

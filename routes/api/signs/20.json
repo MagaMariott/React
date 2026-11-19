@@ -1,0 +1,8 @@
+{
+  "id": 20,
+  "code": "W-20",
+  "name": "Cattle",
+  "category": "warning",
+  "shape": "triangle",
+  "meaning": "Farm animals may be on the road."
+}

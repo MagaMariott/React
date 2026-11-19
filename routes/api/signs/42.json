@@ -1,0 +1,8 @@
+{
+  "id": 42,
+  "code": "P-07",
+  "name": "No trucks",
+  "category": "prohibitory",
+  "shape": "circle",
+  "meaning": "Goods vehicles are banned."
+}

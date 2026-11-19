@@ -1,0 +1,8 @@
+{
+  "id": 31,
+  "code": "W-31",
+  "name": "Roundabout ahead",
+  "category": "warning",
+  "shape": "triangle",
+  "meaning": "A roundabout is coming. Give way as signed."
+}

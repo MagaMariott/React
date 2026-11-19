@@ -1,0 +1,8 @@
+{
+  "id": 80,
+  "code": "I-03",
+  "name": "First aid",
+  "category": "information",
+  "shape": "rectangle",
+  "meaning": "Medical help is available nearby."
+}

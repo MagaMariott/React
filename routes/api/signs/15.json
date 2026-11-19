@@ -1,0 +1,8 @@
+{
+  "id": 15,
+  "code": "W-15",
+  "name": "Road works",
+  "category": "warning",
+  "shape": "triangle",
+  "meaning": "People and machines may be working on the road."
+}

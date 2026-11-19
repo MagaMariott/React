@@ -1,0 +1,8 @@
+{
+  "id": 78,
+  "code": "I-01",
+  "name": "Parking",
+  "category": "information",
+  "shape": "rectangle",
+  "meaning": "A place where parking is provided."
+}

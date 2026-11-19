@@ -1,0 +1,8 @@
+{
+  "id": 40,
+  "code": "P-05",
+  "name": "No bicycles",
+  "category": "prohibitory",
+  "shape": "circle",
+  "meaning": "Cycling is not allowed beyond the sign."
+}

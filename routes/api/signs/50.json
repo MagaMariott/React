@@ -1,0 +1,8 @@
+{
+  "id": 50,
+  "code": "P-15",
+  "name": "Length limit",
+  "category": "prohibitory",
+  "shape": "circle",
+  "meaning": "Vehicles longer than the signed length are banned."
+}

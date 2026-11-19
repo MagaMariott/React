@@ -1,0 +1,8 @@
+{
+  "id": 44,
+  "code": "P-09",
+  "name": "No tractors",
+  "category": "prohibitory",
+  "shape": "circle",
+  "meaning": "Tractors and slow farm vehicles are banned."
+}

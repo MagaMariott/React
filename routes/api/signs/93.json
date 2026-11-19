@@ -1,0 +1,8 @@
+{
+  "id": 93,
+  "code": "I-16",
+  "name": "Living street",
+  "category": "information",
+  "shape": "rectangle",
+  "meaning": "A shared street. People on foot have priority."
+}

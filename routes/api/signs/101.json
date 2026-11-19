@@ -1,0 +1,8 @@
+{
+  "id": 101,
+  "code": "R-06",
+  "name": "Give way to oncoming vehicles",
+  "category": "priority",
+  "shape": "rectangle",
+  "meaning": "Wait if an oncoming vehicle is already in the narrow stretch."
+}

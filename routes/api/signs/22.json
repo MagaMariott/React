@@ -1,0 +1,8 @@
+{
+  "id": 22,
+  "code": "W-22",
+  "name": "Falling rocks",
+  "category": "warning",
+  "shape": "triangle",
+  "meaning": "Rocks may fall onto the carriageway."
+}

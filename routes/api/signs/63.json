@@ -1,0 +1,8 @@
+{
+  "id": 63,
+  "code": "M-01",
+  "name": "Ahead only",
+  "category": "mandatory",
+  "shape": "circle",
+  "meaning": "Continue straight. Do not turn."
+}

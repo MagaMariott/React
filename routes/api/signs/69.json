@@ -1,0 +1,8 @@
+{
+  "id": 69,
+  "code": "M-07",
+  "name": "Keep right",
+  "category": "mandatory",
+  "shape": "circle",
+  "meaning": "Pass the obstacle on its right."
+}

@@ -1,0 +1,8 @@
+{
+  "id": 64,
+  "code": "M-02",
+  "name": "Turn left",
+  "category": "mandatory",
+  "shape": "circle",
+  "meaning": "The only permitted direction is left."
+}

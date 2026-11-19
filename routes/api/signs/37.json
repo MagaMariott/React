@@ -1,0 +1,8 @@
+{
+  "id": 37,
+  "code": "P-02",
+  "name": "Closed to all vehicles",
+  "category": "prohibitory",
+  "shape": "circle",
+  "meaning": "No vehicles may pass this point."
+}

@@ -1,0 +1,8 @@
+{
+  "id": 7,
+  "code": "W-07",
+  "name": "Slippery road",
+  "category": "warning",
+  "shape": "triangle",
+  "meaning": "The surface may be slippery, especially in rain."
+}

@@ -1,0 +1,8 @@
+{
+  "id": 95,
+  "code": "I-18",
+  "name": "End of motorway",
+  "category": "information",
+  "shape": "rectangle",
+  "meaning": "Motorway rules end."
+}

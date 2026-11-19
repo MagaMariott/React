@@ -1,0 +1,8 @@
+{
+  "id": 74,
+  "code": "M-12",
+  "name": "Shared path",
+  "category": "mandatory",
+  "shape": "circle",
+  "meaning": "The path is for both cyclists and pedestrians."
+}

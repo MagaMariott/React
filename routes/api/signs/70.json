@@ -1,0 +1,8 @@
+{
+  "id": 70,
+  "code": "M-08",
+  "name": "Pass either side",
+  "category": "mandatory",
+  "shape": "circle",
+  "meaning": "You may pass the obstacle on either side."
+}

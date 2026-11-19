@@ -1,0 +1,8 @@
+{
+  "id": 26,
+  "code": "W-26",
+  "name": "Other danger",
+  "category": "warning",
+  "shape": "triangle",
+  "meaning": "A hazard that has no sign of its own."
+}

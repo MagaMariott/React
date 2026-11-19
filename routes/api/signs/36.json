@@ -1,0 +1,8 @@
+{
+  "id": 36,
+  "code": "P-01",
+  "name": "No entry",
+  "category": "prohibitory",
+  "shape": "circle",
+  "meaning": "Do not enter from this direction."
+}

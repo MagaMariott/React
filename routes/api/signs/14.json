@@ -1,0 +1,8 @@
+{
+  "id": 14,
+  "code": "W-14",
+  "name": "Quayside",
+  "category": "warning",
+  "shape": "triangle",
+  "meaning": "The road runs next to water without a barrier."
+}

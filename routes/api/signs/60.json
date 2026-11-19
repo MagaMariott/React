@@ -1,0 +1,8 @@
+{
+  "id": 60,
+  "code": "P-25",
+  "name": "No stopping",
+  "category": "prohibitory",
+  "shape": "circle",
+  "meaning": "Stopping is forbidden, even briefly."
+}

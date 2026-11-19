@@ -1,0 +1,8 @@
+{
+  "id": 13,
+  "code": "W-13",
+  "name": "Opening bridge",
+  "category": "warning",
+  "shape": "triangle",
+  "meaning": "A bridge ahead can open for boats."
+}

@@ -1,0 +1,8 @@
+{
+  "id": 27,
+  "code": "W-27",
+  "name": "Level crossing with barriers",
+  "category": "warning",
+  "shape": "triangle",
+  "meaning": "A railway crossing with gates or barriers."
+}

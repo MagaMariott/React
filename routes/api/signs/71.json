@@ -1,0 +1,8 @@
+{
+  "id": 71,
+  "code": "M-09",
+  "name": "Roundabout",
+  "category": "mandatory",
+  "shape": "circle",
+  "meaning": "Enter the roundabout in the signed direction."
+}

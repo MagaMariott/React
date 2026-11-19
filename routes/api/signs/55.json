@@ -1,0 +1,8 @@
+{
+  "id": 55,
+  "code": "P-20",
+  "name": "End of no overtaking",
+  "category": "prohibitory",
+  "shape": "circle",
+  "meaning": "The overtaking ban ends here."
+}

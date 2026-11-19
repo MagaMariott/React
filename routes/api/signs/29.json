@@ -1,0 +1,8 @@
+{
+  "id": 29,
+  "code": "W-29",
+  "name": "Tram crossing",
+  "category": "warning",
+  "shape": "triangle",
+  "meaning": "Tram tracks cross the road."
+}

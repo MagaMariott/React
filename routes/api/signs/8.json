@@ -1,0 +1,8 @@
+{
+  "id": 8,
+  "code": "W-08",
+  "name": "Uneven road",
+  "category": "warning",
+  "shape": "triangle",
+  "meaning": "Bumps, dips, or a rough surface ahead."
+}

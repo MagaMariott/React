@@ -1,0 +1,8 @@
+{
+  "id": 32,
+  "code": "W-32",
+  "name": "Two-way traffic",
+  "category": "warning",
+  "shape": "triangle",
+  "meaning": "One-way flow ends and opposing traffic begins."
+}

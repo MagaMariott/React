@@ -1,0 +1,8 @@
+{
+  "id": 88,
+  "code": "I-11",
+  "name": "Tram stop",
+  "category": "information",
+  "shape": "rectangle",
+  "meaning": "Trams stop here."
+}

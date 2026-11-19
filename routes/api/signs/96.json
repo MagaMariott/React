@@ -1,0 +1,8 @@
+{
+  "id": 96,
+  "code": "R-01",
+  "name": "Give way",
+  "category": "priority",
+  "shape": "inverted",
+  "meaning": "Give way to traffic on the crossing road."
+}

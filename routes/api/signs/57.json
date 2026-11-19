@@ -1,0 +1,8 @@
+{
+  "id": 57,
+  "code": "P-22",
+  "name": "Speed limit 60",
+  "category": "prohibitory",
+  "shape": "circle",
+  "meaning": "Do not exceed 60 kilometres per hour."
+}

@@ -1,0 +1,8 @@
+{
+  "id": 49,
+  "code": "P-14",
+  "name": "Width limit",
+  "category": "prohibitory",
+  "shape": "circle",
+  "meaning": "Vehicles wider than the signed width must turn back."
+}
