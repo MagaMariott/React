@@ -1,7 +1,7 @@
 // Sign routes service worker.
 // The build replaces the two placeholders below (see vite.config.js).
-const VERSION = "20261119-005604";
-const PRECACHE_URLS = ["assets/AboutPage-CpRUqAiQ.js","assets/DashboardPage-CFlMs0LS.js","assets/LoginPage-wIFz47lH.js","assets/NotFoundPage-CC-haNWE.js","assets/OfflinePage-BMJo6j8B.js","assets/ProfilePage-ClItPnlT.js","assets/SignDetailPage-BlLIhxpr.js","assets/SignFormPage-CgAtS0iq.js","assets/SignupPage-O5nlg3di.js","assets/authErrors-B_pqz7Ci.js","assets/index-BxKmKT97.css","assets/index-DpdvI-RL.js","icons/apple-touch-icon.png","icons/icon-192.png","icons/icon-512.png","icons/icon-maskable-512.png","index.html","manifest.json","myimage.JPG","offline.html"];
+const VERSION = "20261119-012242";
+const PRECACHE_URLS = ["assets/AboutPage-DFoxBX1F.js","assets/DashboardPage-DQ57Xscq.js","assets/LoginPage-BjRjkBEJ.js","assets/NotFoundPage-BiD77UCJ.js","assets/OfflinePage-B9d3_1I9.js","assets/ProfilePage-DjNbR4nE.js","assets/SignDetailPage-BkAcPLNi.js","assets/SignFormPage-Dlgh7YHR.js","assets/SignupPage-CMCJ-OCl.js","assets/authErrors-B_pqz7Ci.js","assets/index-BxKmKT97.css","assets/index-Ny4hPG_b.js","icons/apple-touch-icon.png","icons/icon-192.png","icons/icon-512.png","icons/icon-maskable-512.png","index.html","manifest.json","myimage.JPG","offline.html"];
 
 const PREFIX = "sign-routes-";
 const SHELL_CACHE = `${PREFIX}shell-${VERSION}`;
