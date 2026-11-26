@@ -1,6 +1,6 @@
 # Sign routes
 
-A road-sign catalog with React Router, Firebase Authentication, TanStack Query, and a Progressive Web App shell. The list, each sign, the dashboard, about, login, signup, profile, and offline page are separate addresses.
+A road-sign catalog with React Router, Firebase Authentication, Redux Toolkit, and a Progressive Web App shell. The list, each sign, the dashboard, about, login, signup, profile, and offline page are separate addresses.
 
 Public sign records are served as JSON from `public/api/`. The service worker caches them at runtime. Personal progress (learned flags and signs you add) stays in `localStorage` under `sign-routes-deck` and is never written into the shared caches.
 
@@ -52,17 +52,30 @@ Firebase and Google requests are cross-origin and are never handled by this work
 
 The header shows Online or Offline. When the network is gone, a strip offers Retry connection. When a newer build is waiting, a strip offers Update. When the browser fires `beforeinstallprompt`, a strip offers Install.
 
-## Caching (TanStack Query)
+## Redux
 
-The list, the open sign, and the dashboard stats also go through TanStack Query in `src/hooks/useSignQueries.js`.
+Global server state lives in one store (`src/store/store.js`). `main.jsx` wraps the app in `Provider`. Temporary UI state stays in the component: the add-sign draft, the login fields, and the URL filters from `useSearchParams`. Authentication stays in `AuthContext`.
 
-Query keys:
+Slices:
 
-- `['signs', 'list', { search, category, progress, sort, page }]`
-- `['signs', 'detail', id]`
-- `['signs', 'stats', category]`
+- `signs` holds the current list page, the query that produced it, and the save status for create and learned updates.
+- `detail` holds the open sign.
+- `stats` holds the dashboard counts for the selected kind.
 
-A result is fresh for 60 seconds. Creating a sign or changing the learned flag invalidates the list and the stats, and writes the detail entry.
+Thunks in `src/store/signThunks.js`:
+
+- `fetchSigns` loads one list page.
+- `fetchSign` loads one sign.
+- `fetchStats` loads the dashboard.
+- `createSignRecord` and `updateLearned` write, then dispatch a fresh list and stats request.
+
+`extraReducers` set `pending`, `fulfilled`, and `rejected`. A response is ignored when its `requestId` is no longer the latest one, and an aborted request does not replace the screen with an error. The same query is not requested again for 60 seconds. Pages read the store with `useSelector` and send work with `useDispatch` through `src/hooks/useSignQueries.js`.
+
+Selectors in `src/store/selectors.js`:
+
+- `selectSignListView`, `selectDetailView`, and `selectStatsView` are memoized with `createSelector`. They turn each slice into the loading, error, and data flags the pages render.
+- `selectLearnedShare` is memoized too. It derives the learned percentage from the stats.
+- `selectSaveState` is memoized and describes the in-flight create or learned update.
 
 ## GitHub Pages
 
